@@ -1,0 +1,69 @@
+// Resets
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+// Variables
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$light-red: hsl(0, 100%, 63%);
+$white: hsl(0, 0%, 100%);
+
+$dark-blue: (
+    'intro': hsl(217, 28%, 15%),
+    'main': hsl(218, 28%, 13%),
+    'footer':  hsl(216, 53%, 9%),
+    'testimonial': hsl(219, 30%, 18%)
+);
+
+$font-weights: (
+    'default': 400,
+    'bold': 700
+);
+
+// Functions
+@function dark($color-name) {
+    @return map-get($dark-blue, $color-name );
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name );
+};
+
+// Mixins
+@mixin flexCenter($position, $direction) {
+    display: flex;
+    justify-content: $position;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin transition($target-name) {
+    transition: $target-name 0.4s ease-in-out;
+};
+
+@mixin breakpoint($point) {
+    @if $point == smallscreen {
+        @media screen and (max-width: 330px) { @content; }
+    }
+    @else if $point == mobile {
+        @media screen and (min-width: 330px) { @content; }
+    }
+    @else if $point == tablet {
+        @media screen and (min-width: 480px) { @content; }
+    }
+    @else if $point == laptop {
+        @media screen and (min-width: 768px) { @content; }
+    }
+    @else if $point == desktop {
+        @media screen and (min-width: 1024px) { @content; }
+    }
+    @else if $point == largescreen {
+        @media screen and (min-width: 1224px) { @content; }
+    }
+}
