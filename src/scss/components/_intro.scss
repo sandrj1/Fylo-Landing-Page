@@ -1,0 +1,56 @@
+@use './base';
+
+
+.intro {
+    margin-top: 1.25em;
+    background-image: url('../images/bg-curvy-mobile.svg'); 
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 13em;
+    text-align: center;
+
+    @media screen and (min-width: 376px) {
+        background-size: 100vw;
+    }
+
+    img {
+        width: 300px;
+    }
+
+    #{&}__content {
+        margin-top: 7em;
+        margin-top: calc(37vw - 3em);
+        background: base.dark(main);
+
+        &--box {
+            h1 {
+                font-family: base.$ff-headings;
+                font-size: 1.7em;
+                line-height: 1.5em;
+            }
+
+            p {
+                width: 92.5%;
+                margin-top: 1em;
+                line-height: 1.5em;
+    
+            }
+
+            button {
+                @include base.button(17em);
+                margin-top: 2em;
+            }
+
+            @media (hover:hover) {
+                button:hover {
+                    background: base.$cyan;
+                }
+            }
+
+            button:active {
+                outline: 2px solid base.$cyan;
+                outline-offset: -1px;
+            }
+        }
+    }
+}

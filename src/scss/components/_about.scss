@@ -1,0 +1,38 @@
+@use './base';
+
+.about {
+    background: base.dark(main);
+
+    & > img {
+        width: 300px;
+    }
+
+    article {
+        h2 {
+            margin-top: 2.5em;
+            font-family: base.$ff-headings;
+            font-size: 1.25em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.5em;
+        }
+
+        .article__link {
+            width: fit-content;
+            padding-bottom: 0.25em;
+            border-bottom: 1px solid base.$cyan;
+            cursor: pointer;
+
+            a {
+                @include base.transition(color);
+                padding-right: 0.5em;
+                font-family: base.$ff-headings;
+                font-size: 0.85em;
+                color: base.$cyan;
+                text-decoration: none;
+            }
+        }
+    }
+}

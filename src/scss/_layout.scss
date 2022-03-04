@@ -1,1 +1,66 @@
 @use './base';
+
+header {
+    @include base.flexCenter(space-between, row);
+    padding: 2em 5%;
+}
+
+.intro {
+    @include base.flexCenter(center, column);
+    #{&}__content {
+        width: 100%;
+        &--box {
+            @include base.flexCenter(center, column);
+            padding: 0 7.5%;
+            transform: translateY(-4.5em);
+        }
+    }
+}
+
+.features__card, .about {
+    @include base.flexCenter(center, column);
+    padding: 0 7.5%;
+}
+
+.article__link {
+    @include base.flexCenter(center, row);
+}
+
+.testimonials {
+    align-items: flex-start;
+    padding: 0 12.5%;
+
+    &__profile {
+        @include base.flexCenter(flex-start, row);
+    }
+}
+
+.signup {
+    @include base.flexCenter(center, column);
+    padding: 0 5%;
+
+    form {
+        @include base.flexCenter(center, column);
+    }
+}
+
+footer {
+    padding: 12.5em 7.5% 2.5em;
+
+    .info__position, .info__contact--phone, .info__contact--email {
+        @include base.flexCenter(flex-start, row);
+        align-items: flex-start;
+    }
+
+    .info__links--about, .info__links--terms {
+        @include base.flexCenter(flex-start, column);
+        align-items: flex-start;
+    }
+
+    .info__links--social {
+        @include base.flexCenter(center, row);
+        a {
+            @include base.flexCenter(center, column);
+        }
+    }
+}

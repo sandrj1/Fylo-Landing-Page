@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/css/all.css';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Features from './components/Features';

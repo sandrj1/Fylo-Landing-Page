@@ -1,0 +1,76 @@
+@use './base';
+
+.signup {
+    background: base.dark(main);
+    text-align: center;
+
+    #{&}__container {
+        border-radius: 7.5px;
+        background: base.dark(intro);
+        transform: translateY(12em);
+        
+        h2 {
+            margin-top: 2em;
+            font-family: base.$ff-headings;
+            font-size: 1.5em;
+        }
+
+        p {
+            margin-top: 1.25em;
+            padding: 0 7.5%;
+            line-height: 1.5em;
+        }
+
+        form {
+            margin: 2.25em 0;
+
+            #email {
+                width: 85%;
+                height: 3.5em;
+                padding-left: 2em;
+                border: none;
+                border-radius: 40px;
+                outline: none;
+                font-family: base.$ff-default;
+                font-weight: base.weight(bold);
+                color: base.dark(intro);
+                letter-spacing: 0.05em;
+
+
+                &::placeholder {
+                    font-size: 0.75em;
+                    font-weight: base.weight(default);
+                    color: rgb(170, 170, 170);
+                    letter-spacing: 0.05em;
+                }
+            }
+
+            p {
+                display: none;
+                width: calc(85% - 5em);
+                margin-top: 0.75em;
+                padding: 0;
+                font-size: 0.75em;
+                color: base.$light-red;
+                text-align: start;
+                letter-spacing: 0.05em;
+            }
+
+            #submit {
+                @include base.button(85%);
+                margin-top: 1.5em;
+            }
+
+            @media (hover:hover) {
+                #submit:hover {
+                    background: base.$cyan;
+                }
+            }
+
+            #submit:active {
+                outline: 2px solid base.$cyan;
+                outline-offset: -1px;
+            }
+        }
+    }
+}

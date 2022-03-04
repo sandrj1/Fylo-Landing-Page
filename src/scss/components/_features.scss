@@ -1,0 +1,34 @@
+@use './base';
+
+.features {
+    padding-top: 4em;
+    background: base.dark(main);
+
+    #{&}__card {
+        padding-bottom: 6.25em;
+        text-align: center;
+
+        img {
+            width: 70px;
+        }
+
+        .img__access {
+            width: 60px;
+        }
+
+        .img__security {
+            width: 50px;
+        }
+
+        h2 {
+            margin-top: 1.75em;
+            font-family: base.$ff-headings;
+            font-size: 1.35em;
+        }
+
+        p {
+            margin-top: 0.75em;
+            line-height: 1.5em;
+        }
+    }
+}

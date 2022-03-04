@@ -4,8 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 // Variables
@@ -20,6 +20,9 @@ $dark-blue: (
     'footer':  hsl(216, 53%, 9%),
     'testimonial': hsl(219, 30%, 18%)
 );
+
+$ff-headings: 'Raleway', sans-serif;
+$ff-default: 'Open Sans', sans-serif;
 
 $font-weights: (
     'default': 400,
@@ -41,6 +44,19 @@ $font-weights: (
     justify-content: $position;
     align-items: center;
     flex-direction: $direction;
+}
+
+@mixin button($width){
+    width: $width;
+    height: 3.5em;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(to right, $cyan, $blue);
+    font-family: $ff-headings;
+    font-weight: weight(bold);
+    color: $white;
+    letter-spacing: 0.02em;
+    cursor: pointer;
 }
 
 @mixin transition($target-name) {

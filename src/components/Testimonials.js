@@ -14,19 +14,22 @@ const testimonialsData = [
     },
     {
         'image': profile3,
-        'name': 'Iva Boyd'
+        'name': 'Iva Boyd',
+        'order': 'last-card'
     }
 ]
 
 const Testimonials = () => {
     const testimonialsCards = testimonialsData.map(item => {
         const testimonialsCard = `
-                <div class='testimonials__card'>
+                <div class='testimonials__card' id=${item.order}>
                     <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
                     <div class='testimonials__profile'>
                         <img src=${item.image} alt=''>
-                        <h3>${item.name}</h3>
-                        <p>Founder & CEO, Huddle</p>
+                        <div class='testimonials__profile--description'>
+                            <h3>${item.name}</h3>
+                            <p>Founder & CEO, Huddle</p>
+                        </div>
                     </div>
                 </div>
             `;
@@ -35,9 +38,7 @@ const Testimonials = () => {
     
     const testimonials = `
         <img src=${quotesImg} alt=''>
-        <div class='testimonials__container'>
-            ${testimonialsCards}
-        </div>
+        ${testimonialsCards}
     `
     return testimonials
 }

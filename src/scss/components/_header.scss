@@ -1,0 +1,37 @@
+@use './base';
+
+body {
+    background: base.dark(intro);
+    font-family: base.$ff-default;
+    color: base.$white;
+}
+
+header {
+    overflow: hidden;
+
+    img {
+        width: 90px;
+    }
+
+    a {
+        margin-left: 0.7em;
+        margin-right: 0.7em;
+        font-family: base.$ff-headings;
+        font-size: 0.88em;
+        color: base.$white;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+    }
+
+    @media (hover: hover) {
+        a:hover {
+            text-shadow: 0 0 1px white;
+            text-decoration: underline;
+        }
+    } 
+
+    a:active {
+        text-shadow: 0 0 1px white;
+        text-decoration: underline;
+    }
+}
