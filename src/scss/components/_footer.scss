@@ -2,19 +2,22 @@
 
 footer {
     background: base.dark(footer);
+
     img {
         margin-top: 5.5em;
         padding-left: 0.5em;
     }
 
     a {
-        text-decoration: none;
         color: base.$white;
+        text-decoration: none;
     }
 
     .info {
         margin-top: 3em;
+
         &__position {
+
             i {
                 padding: 0.75em 1.5em 0 0;
             }
@@ -25,15 +28,17 @@ footer {
             }
         }
 
-        &__contact{
+        &__contact {
+
             i {
                 padding: 0.1em 1.5em 0 0;
             }
+
             p {
                 line-height: 1em;
             }
 
-            &--phone{
+            &--phone {
                 margin: 1.25em 0;
             }
         }
@@ -44,6 +49,7 @@ footer {
 
         &__links--about, &__links--terms {
             letter-spacing: 0.05em;
+
             a {
                 margin-bottom: 1em;
             }
@@ -57,12 +63,45 @@ footer {
 
         &__links--social {
             margin-top: 4em;
+
             a {
                 width: 30px;
                 height: 30px;
                 margin: 0.5em;
                 border: 1px solid base.$white;
                 border-radius: 50%;
+            }
+        }
+    }
+
+    @include base.breakpoint(largescreen) {
+        img {
+            width: 120px;
+            margin-top: 5em;
+            padding-left: 0;
+        }
+
+        .info {
+            p, a {
+                font-size: 1.1rem;
+            }
+
+            &__contact--phone {
+                margin-top: 0.25em;
+            }
+
+            &__links--about, &__links--social {
+                align-items: flex-start;
+                margin-top: 0;
+                margin-bottom: 1em;
+            }
+
+            &__links--social {
+                transform: translateY(-0.5em);
+
+                a {
+                    font-size: 1rem;
+                }
             }
         }
     }

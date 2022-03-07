@@ -6,6 +6,27 @@ body {
     color: base.$white;
 }
 
+.background {
+    #{&}__image {
+        height: 37.6vw;
+        background-image: url('../images/bg-curvy-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 100vw;
+    }
+
+    #{&}__color {
+        height: 200vh;
+        background: base.dark(main);
+    }
+
+    @include base.breakpoint(largescreen){
+        #{&}__image {
+            height: 31.2vw;
+            background-image: url('../images/bg-curvy-desktop.svg');
+        }
+    }
+}
+
 header {
     overflow: hidden;
 
@@ -17,7 +38,7 @@ header {
         margin-left: 0.7em;
         margin-right: 0.7em;
         font-family: base.$ff-headings;
-        font-size: 0.88em;
+        font-size: 0.88rem;
         color: base.$white;
         text-decoration: none;
         letter-spacing: 0.05em;
@@ -33,5 +54,17 @@ header {
     a:active {
         text-shadow: 0 0 1px white;
         text-decoration: underline;
+    }
+
+    @include base.breakpoint(largescreen) {
+        img {
+            width: 175px;
+        }
+
+        a {
+            margin-left: 2em;
+            font-size: 1.15rem;
+            letter-spacing: 0.1em;
+        }
     }
 }

@@ -6,18 +6,20 @@ import profile3 from '../images/profile-3.jpg';
 const testimonialsData = [
     {
         'image': profile1,
-        'name': 'Satish Patel'
+        'name': 'Satish Patel',
+        'order': 'first-card'
     },
     {
         'image': profile2,
-        'name': 'Bruce McKenzie'
+        'name': 'Bruce McKenzie',
+        'order': 'second-card'
     },
     {
         'image': profile3,
         'name': 'Iva Boyd',
         'order': 'last-card'
     }
-]
+];
 
 const Testimonials = () => {
     const testimonialsCards = testimonialsData.map(item => {
@@ -38,7 +40,7 @@ const Testimonials = () => {
     
     const testimonials = `
         <img src=${quotesImg} alt=''>
-        ${testimonialsCards}
+        <div class='testimonials__cards'>${testimonialsCards}</div>
     `
     return testimonials
 }

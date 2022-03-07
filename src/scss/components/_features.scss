@@ -2,7 +2,6 @@
 
 .features {
     padding-top: 4em;
-    background: base.dark(main);
 
     #{&}__card {
         padding-bottom: 6.25em;
@@ -23,12 +22,49 @@
         h2 {
             margin-top: 1.75em;
             font-family: base.$ff-headings;
-            font-size: 1.35em;
+            font-size: 1.35rem;
         }
 
         p {
             margin-top: 0.75em;
             line-height: 1.5em;
+        }
+    }
+
+    @include base.breakpoint(largescreen) {
+        width: 65%;
+        margin-top: 2.5em;
+        background: transparent;
+
+        #{&}__card {
+            padding-left: 0;
+            padding-right: 0;
+            
+            img {
+                width: 90px;
+            }
+
+            .img__access {
+                width: 80px;
+            }
+
+            .img__security {
+                width: 70px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                width: 95%;
+                font-size: 1.15rem;
+            }
+        }
+
+        #{&}__card--security {
+            position: relative;
+            bottom: 0.75em;
         }
     }
 }
