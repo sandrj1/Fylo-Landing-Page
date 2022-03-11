@@ -1,3 +1,4 @@
+import AOS from 'aos';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Header from './components/Header';
 import Intro from './components/Intro';
@@ -16,6 +17,13 @@ const signup = document.querySelector('.signup');
 const footer = document.querySelector('footer');
 
 window.addEventListener('load', () => {
+    AOS.init({
+        easing: 'ease',
+        duration: '2000',
+        once: true,
+        anchorPlacement: 'center-bottom'
+    });
+
     header.innerHTML = Header();
     intro.innerHTML = Intro();
     features.innerHTML = Features();
@@ -23,4 +31,40 @@ window.addEventListener('load', () => {
     testimonials.innerHTML = Testimonials();
     signup.innerHTML = Signup();
     footer.innerHTML = Footer();
+
+    const form = document.querySelector('form');
+    const email = document.querySelector('#email');
+    let validEmail = false;
+
+    email.onkeyup = (e) => {
+        let value = e.target.value;
+        let at = value.indexOf('@');
+        let dot = value.lastIndexOf('.');
+
+        if (
+            value.includes('@') &&
+            value.includes('.') &&
+            !value.startsWith('@') &&
+            !value.endsWith('@') &&
+            !value.startsWith('.') &&
+            !value.endsWith('.') &&
+            (dot - at > 2)
+        ) {
+            validEmail = true;
+        } else {
+            validEmail = false;
+        }
+    }
+
+    form.onsubmit = () => {
+        if (email.value === '') {
+            email.nextElementSibling.innerHTML = 'This field cannot be empty';
+            email.nextElementSibling.style.display = 'block'; 
+        } else if (!validEmail) {
+            email.nextElementSibling.innerHTML = 'Please enter a valid email address';
+            email.nextElementSibling.style.display = 'block'; 
+        }
+
+        return validEmail;
+    }
 })

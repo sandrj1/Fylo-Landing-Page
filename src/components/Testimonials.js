@@ -24,7 +24,11 @@ const testimonialsData = [
 const Testimonials = () => {
     const testimonialsCards = testimonialsData.map(item => {
         const testimonialsCard = `
-                <div class='testimonials__card' id=${item.order}>
+                <div class='testimonials__card' id=${item.order}
+                data-aos='fade-up'
+                ${item.order === 'first-card'
+                ? 'data-aos-offset= "700"'
+                : 'data-aos-offset= "750"'}>
                     <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
                     <div class='testimonials__profile'>
                         <img src=${item.image} alt=''>
@@ -39,7 +43,9 @@ const Testimonials = () => {
     }).join('');
     
     const testimonials = `
-        <img src=${quotesImg} alt=''>
+        <img src=${quotesImg} alt=''
+        data-aos='fade-up'
+        data-aos-offset='750'>
         <div class='testimonials__cards'>${testimonialsCards}</div>
     `
     return testimonials

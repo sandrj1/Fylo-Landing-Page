@@ -7,6 +7,10 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 // Variables
 $cyan: hsl(176, 68%, 64%);
 $blue: hsl(198, 60%, 50%);

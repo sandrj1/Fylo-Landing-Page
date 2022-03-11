@@ -4,6 +4,7 @@ body {
     background: base.dark(intro);
     font-family: base.$ff-default;
     color: base.$white;
+    overflow-x: hidden;
 }
 
 .background {
@@ -15,7 +16,7 @@ body {
     }
 
     #{&}__color {
-        height: 200vh;
+        height: 220vh;
         background: base.dark(main);
     }
 
@@ -23,6 +24,11 @@ body {
         #{&}__image {
             height: 31.2vw;
             background-image: url('../images/bg-curvy-desktop.svg');
+        }
+
+        #{&}__color {
+            height: 150vh;
+            background: base.dark(main);
         }
     }
 }

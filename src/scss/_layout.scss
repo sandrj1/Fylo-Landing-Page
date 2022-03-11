@@ -14,7 +14,7 @@
 
 header {
     @include base.flexCenter(space-between, row);
-    padding: 2em 5%;
+    padding: 2em 5% 1em;
 }
 
 .intro {
