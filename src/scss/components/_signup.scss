@@ -91,8 +91,16 @@
             }
 
             form {
-                #email {
-                    width: 85%;
+                .email__container{
+                    width: 72.5%;
+
+                    #email {
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    padding-left: 3em;
                 }
 
                 #submit {
@@ -129,9 +137,9 @@
                     width: 65%;
                     margin-right: 5%;
 
-                    #email {
-                        width: 100%;
-                    }
+                    p {
+                    padding-left: 2.5em;
+                }
 
                     #email::placeholder, p {
                         font-size: 0.85rem;
