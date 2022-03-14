@@ -19,7 +19,7 @@ const footer = document.querySelector('footer');
 window.addEventListener('load', () => {
     AOS.init({
         easing: 'ease',
-        duration: '2000',
+        duration: '1750',
         once: true,
         anchorPlacement: 'center-bottom'
     });

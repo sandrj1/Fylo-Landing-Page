@@ -37,7 +37,7 @@ const Features = () => {
             data-aos='fade-up'
             ${item.name === 'access'
             ? 'data-aos-offset="120"'
-            : 'data-aos-offset="300"'}>
+            : 'data-aos-offset="200"'}>
                 <img class='img__${item.name}' src=${item.image} alt=''>
                 <h2>${item.title}</h2>
                 <p>${item.description}</p>

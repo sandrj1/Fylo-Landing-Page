@@ -27,8 +27,8 @@ const Testimonials = () => {
                 <div class='testimonials__card' id=${item.order}
                 data-aos='fade-up'
                 ${item.order === 'first-card'
-                ? 'data-aos-offset= "700"'
-                : 'data-aos-offset= "750"'}>
+                ? 'data-aos-offset= "400"'
+                : 'data-aos-offset= "450"'}>
                     <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
                     <div class='testimonials__profile'>
                         <img src=${item.image} alt=''>
@@ -45,7 +45,7 @@ const Testimonials = () => {
     const testimonials = `
         <img src=${quotesImg} alt=''
         data-aos='fade-up'
-        data-aos-offset='750'>
+        data-aos-offset='450'>
         <div class='testimonials__cards'>${testimonialsCards}</div>
     `
     return testimonials
