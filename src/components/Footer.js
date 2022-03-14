@@ -30,13 +30,16 @@ const Footer = () => {
                 <a href='#'>Privacy</a>
             </div>
             <div class='info__links--social'>
-                <a href='https://www.facebook.com/' target='_blank'>
+                <a href='https://www.facebook.com/' 
+                aria-label="Link to Facebook" target='_blank'>
                 <i class='fa-brands fa-facebook-f'></i>
                 </a>
-                <a href='https://www.twitter.com/' target='_blank'>
+                <a href='https://www.twitter.com/'
+                aria-label="Link to Twitter" target='_blank'>
                 <i class='fa-brands fa-twitter'></i>
                 </a>
-                <a href='https://www.instagram.com/' target='_blank'>
+                <a href='https://www.instagram.com/'
+                aria-label="Link to Instagram" target='_blank'>
                 <i class='fa-brands fa-instagram'></i>
                 </a>
             </div>

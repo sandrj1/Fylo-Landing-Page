@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
         easing: 'ease',
         duration: '2000',
         once: true,
+        disable: true,
         anchorPlacement: 'center-bottom'
     });
 
