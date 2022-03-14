@@ -85,4 +85,7 @@ $font-weights: (
     @else if $point == largescreen {
         @media screen and (min-width: 1224px) { @content; }
     }
+    @else if $point == preview {
+        @media screen and (min-width: 1440px) { @content; }
+    }
 }

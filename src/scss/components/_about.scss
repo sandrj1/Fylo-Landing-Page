@@ -37,20 +37,134 @@
         }
     }
 
-    @include base.breakpoint(largescreen) {
-        margin-top: 5em;
+    @include base.breakpoint(smallscreen) {
+        & > img {
+            width: 250px;
+        }
+    }
+
+    @include base.breakpoint(tablet) {
         background: base.dark(main);
-        
+
+        & > img {
+            width: 320px;
+        }
+
+        article {
+            padding-left: 7.5%;
+            padding-right: 7.5%;
+
+            h2 {
+                font-size: 1.56rem;
+            }
+
+            p {
+                font-size: 1.05rem;
+            }
+
+            .article__link {
+                a {
+                    font-size: 0.95rem;
+                }
+                
+            }
+        }
+    }
+
+    @media screen and (min-width: 800px) and (max-width: 900px) {
+        & > img {
+            width: 350px;
+        }
+    }
+
+    @media screen and (min-width: 901px) and (max-width: 1024px) {
+        & > img {
+            width: 390px;
+        }
+    }
+
+    @include base.breakpoint(laptop) {
+        margin-top: 5em;
+
+        article {
+            padding-left: 4em;
+            padding-right: 0;
+
+            h2 {
+                margin-top: 0.75em;
+                font-size: 1.87rem;
+            }
+
+            p {
+                font-size: 1.10rem;
+            }
+
+            .article__link {
+                margin-top: 2em;
+                a {
+                    font-size: 1.05rem;
+                }
+                
+            }
+        }
+    }
+    @include base.breakpoint(desktop) {
+        & > img {
+            width: 460px;
+        }
+
+        article {
+
+            h2 {
+                font-size: 2.18rem;
+            }
+
+            p {
+                font-size: 1.15rem;
+            }
+
+            .article__link {
+                a {
+                    font-size: 1.1rem;
+                }
+                
+            }
+        }
+    }
+    
+
+    @include base.breakpoint(largescreen) {        
+        & > img {
+            width: 530px;
+        }
+
+        article {
+
+            h2 {
+                font-size: 2.49rem;
+            }
+
+            p {
+                font-size: 1.15rem;
+            }
+
+            .article__link {
+                a {
+                    font-size: 1.1rem;
+                }
+                
+            }
+        }
+    }
+
+    @include base.breakpoint(preview) {
         & > img {
             width: 600px;
         }
 
         article {
-            padding-left: 4em;
 
             h2 {
-                width: 80%;
-                margin-top: 0.75em;
                 font-size: 2.8rem;
             }
 
@@ -59,8 +173,6 @@
             }
 
             .article__link {
-                margin-top: 2em;
-
                 a {
                     font-size: 1.1rem;
                 }

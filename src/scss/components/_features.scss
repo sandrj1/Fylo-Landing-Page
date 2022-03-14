@@ -35,15 +35,86 @@
         padding-bottom: 0;
     }
 
+    @include base.breakpoint(tablet) {
+        #{&}__card {
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            p {
+                width: 95%;
+                font-size: 1.1rem;
+            }
+        }
+        
+        #{&}__card--security {
+            position: relative;
+            bottom: 0.75em;
+        }
+
+        #{&}__card--store {
+            padding-bottom: 5em;
+        }
+        
+    }
+
+    @include base.breakpoint(laptop) {
+        #{&}__card {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @include base.breakpoint(desktop) {
+        width: 65%;
+        margin-top: 2.5em;
+        background: transparent;
+        
+        #{&}__card {
+            img {
+                width: 80px;
+            }
+
+            .img__access {
+                width: 70px;
+            }
+
+            .img__security {
+                width: 60px;
+            }
+
+            h2 {
+                font-size: 1.45rem;
+            }
+
+            p {
+                width: 95%;
+                font-size: 1.15rem;
+            }
+        }
+
+        #{&}__card--store {
+            padding-bottom: 6.5em;
+        }
+
+    }
+
     @include base.breakpoint(largescreen) {
         width: 65%;
         margin-top: 2.5em;
         background: transparent;
 
         #{&}__card {
-            padding-left: 0;
-            padding-right: 0;
-            
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+
+    @include base.breakpoint(preview) {
+        #{&}__card {
+            margin-left: 10%;
+            margin-right: 10%;
+
             img {
                 width: 90px;
             }
@@ -62,17 +133,8 @@
 
             p {
                 width: 95%;
-                font-size: 1.15rem;
+                font-size: 1.2rem;
             }
-        }
-
-        #{&}__card--security {
-            position: relative;
-            bottom: 0.75em;
-        }
-
-        #{&}__card--store {
-            padding-bottom: 6.25em;
         }
     }
 }

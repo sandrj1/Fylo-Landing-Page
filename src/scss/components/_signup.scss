@@ -72,15 +72,45 @@
         }
     }
 
-    @include base.breakpoint(largescreen) {
+    @include base.breakpoint(smallscreen) {
+        #{&}__container {
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    @include base.breakpoint(tablet) {
         background: base.dark(main);
 
         #{&}__container {
-            width: 65%;
+            width: 77.5%;
+
+            h2 {
+                font-size: 1.65rem;
+            }
+
+            form {
+                #email {
+                    width: 85%;
+                }
+
+                #submit {
+                    width: 72.5%;
+                }
+            }
+        }
+    }
+    
+    @include base.breakpoint(laptop) {
+        background: base.dark(main);
+
+        #{&}__container {
+            width: 72.5%;
 
             h2 {
                 margin-top: 1.75em;
-                font-size: 2.25rem;
+                font-size: 1.8rem;
             }
 
             & > p {
@@ -92,10 +122,16 @@
 
             form {
                 margin: 2.5em 0 3em;
+                padding-left: 5%;
+                padding-right: 5%;
                 
                 .email__container {
-                    width: 55%;
-                    margin-right: 2em;
+                    width: 65%;
+                    margin-right: 5%;
+
+                    #email {
+                        width: 100%;
+                    }
 
                     #email::placeholder, p {
                         font-size: 0.85rem;
@@ -103,8 +139,64 @@
                 }
 
                 #submit {
-                    width: 25%;
+                    width: 50%;
                     margin-top: 0;
+                }
+            }
+        }
+    }
+
+    @include base.breakpoint(desktop) {
+        #{&}__container {
+            width: 67.5%;
+
+            h2 {
+                font-size: 1.95rem;
+            }
+
+            form {
+
+                #submit {
+                    width: 40%;
+                }
+            }
+        }
+
+    }
+    @include base.breakpoint(largescreen) {
+        #{&}__container {
+            width: 65%;
+
+            h2 {
+                font-size: 2.1rem;
+            }
+
+            form {
+                padding-left: 0;
+                padding-right: 0;
+                
+                .email__container {
+                    width: 55%;
+                    margin-right: 2em;
+                }
+
+                #submit {
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    @include base.breakpoint(preview) {
+        #{&}__container {
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+
+            form {
+                #submit {
+                    width: 25%;
                 }
             }
         }

@@ -46,29 +46,107 @@
         }
     }
 
-    @include base.breakpoint(largescreen){
+    @include base.breakpoint(smallscreen) {
         img {
-            width: 675px;
+            width: 250px;
         }
 
         .intro__content {
-            width: 60%;
-            margin-top: 7em;
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    @include base.breakpoint(tablet) {
+        img {
+            width: 335px;
+        }
+
+        .intro__content {
+            width: 80%;
 
             h1 {
-                font-size: 2.8rem;
+                font-size: 1.75rem;
             }
 
             p {
-                width: 80%;
-                margin-top: 1.5em;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 line-height: 1.65em;
             }
 
             a {
                 padding: 1.1em;
                 font-size: 1.25rem;
+            }
+        }
+    }
+
+    @include base.breakpoint(laptop) {
+        img {
+            width: 420px;
+        }
+
+        .intro__content {
+            width: 70%;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    @include base.breakpoint(desktop) {
+        img {
+            width: 505px;
+        }
+
+        .intro__content {
+            width: 60%;
+            
+            h1 {
+                font-size: 2.25rem;
+            }
+        }
+    }
+
+    @include base.breakpoint(largescreen){
+        img {
+            width: 590px;
+        }
+
+        .intro__content {
+            margin-top: 7em;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                width: 80%;
+                margin-top: 1.5em;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    @include base.breakpoint(preview) {
+        img {
+            width: 675px;
+        }
+
+        .intro__content {
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            p {
+                font-size: 1.4rem;
             }
         }
     }

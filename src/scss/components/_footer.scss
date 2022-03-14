@@ -74,7 +74,19 @@ footer {
         }
     }
 
-    @include base.breakpoint(largescreen) {
+    @include base.breakpoint(smallscreen) {
+        img {
+            width: 140px;
+        }
+    }
+
+    @include base.breakpoint(tablet) {
+        
+    }
+    @include base.breakpoint(laptop) {
+        padding-left: 15%;
+        padding-right: 15%;
+
         img {
             width: 120px;
             margin-top: 5em;
@@ -88,12 +100,70 @@ footer {
 
             &__contact--phone {
                 margin-top: 0.25em;
+
+                p {
+                    margin-left: 1em;
+                }
             }
 
             &__links--about, &__links--social {
                 align-items: flex-start;
                 margin-top: 0;
                 margin-bottom: 1em;
+            }
+
+            &__links--about {
+                margin-top: 5em;
+                margin-left: 2.75em;
+            }
+
+            &__links--terms {
+                margin-top: 5em;
+            }
+
+            &__links--social {
+                margin-top: 3em;
+                margin-left: 2em;
+
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    @include base.breakpoint(largescreen) {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+
+        img {
+            width: 120px;
+            margin-top: 5em;
+            padding-left: 0;
+        }
+
+        .info {
+            p, a {
+                font-size: 1.1rem;
+            }
+
+            &__contact--phone {
+                margin-top: 0.25em;
+
+                p {
+                    margin-left: 0;
+                }
+            }
+
+            &__links--about, &__links--social {
+                align-items: flex-start;
+                margin-top: 0;
+                margin-left: 0;
+                margin-bottom: 1em;
+            }
+
+            &__links--terms {
+                margin-top: 0;
             }
 
             &__links--social {
